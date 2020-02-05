@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  
+  each msg in messages
+    div
+      h2= msg.user
+      p= msg.text
+      p= msg.added
+
+  a(href='/new') Post a new message
